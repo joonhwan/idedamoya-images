@@ -16,6 +16,7 @@ ENV PGDATA=/pgdata
 RUN docker-entrypoint.sh postgres
 
 FROM postgres:14.5 AS buildtime_init
+LABEL org.opencontainers.image.source https://github.com/joonhwan/igedamoya-images
 ENV POSTGRES_USER=postgres
 ENV POSTGRES_PASSWORD=postgres
 ENV POSTGRES_HOST_AUTH_METHOD=trust
